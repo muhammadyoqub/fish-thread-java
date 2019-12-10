@@ -42,8 +42,7 @@ class Meeting extends Thread {
                 do {
                     first = new Random().nextInt(Main.aquarium.size());
                     second = new Random().nextInt(Main.aquarium.size());
-                } while (first == second ||
-                        Main.aquarium.get(first).getGender().equals(Main.aquarium.get(second).getGender()));
+                } while (Main.aquarium.get(first).getGender().equals(Main.aquarium.get(second).getGender()));
                 System.out.printf("%s%s fish named %d  met with %s fish named %d\n%s",
                         Main.GREEN, Main.aquarium.get(first).getGender().label, first,
                         Main.aquarium.get(second).getGender().label, second, Main.GREEN);
